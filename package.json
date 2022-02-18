@@ -1,0 +1,26 @@
+{
+  "name": "testcafe-training",
+  "version": "1.0.0",
+  "description": "Automated testing with TestCafe",
+  "main": "index.js",
+  "scripts": {
+    "test:chrome": "testcafe chrome ./tests/*.ts -s takeOnFails=true --disable-page-caching",
+    "test:chrome:6": "testcafe -c 6 chrome ./tests/*.ts -s takeOnFails=true --disable-page-caching",
+    "test:chrome:headless": "testcafe chrome:headless ./tests/*.ts -s takeOnFails=true --disable-page-caching",
+    "test:chrome:headless:6": "testcafe -c 6 chrome:headless ./tests/*.ts -s takeOnFails=true --disable-page-caching",
+    "test:chrome:mobile": "testcafe chrome:emulation:device=iphone X ./tests/*.ts -s takeOnFails=true --disable-page-caching",
+    "test:firefox": "testcafe firefox ./tests/*.ts -s takeOnFails=true --disable-page-caching",
+    "test:multiple": "testcafe chrome,firefox ./tests/*.ts -s takeOnFails=true --disable-page-caching"
+  },
+  "keywords": [
+    "TestCafe",
+    "Testing",
+    "Automation"
+  ],
+  "author": "Javier Gerard",
+  "license": "ISC",
+  "dependencies": {
+    "prettier": "^2.5.1",
+    "testcafe": "^1.18.3"
+  }
+}

@@ -26,7 +26,7 @@ fixture `New Payment tests`
     loginPage = await mainPage.signIn();
     homePage = await loginPage.login(VALID_USERNAME, VALID_PASSWORD);
 });
-test(`User can add new payee to the list`, async t => {
+test.skip(`User can add new payee to the list`, async t => {
     // Navigate to the "Pay Bills" page
     payBillsPage = await homePage.navigateToPayBillsPage();
     // Navigate to the "Add Payee" page

@@ -25,7 +25,7 @@ test(`User cannot login with invalid credentials`, async t => {
     await loginPage.login(INVALID_USERNAME, INVALID_PASSWORD);
     await t.expect(await loginPage.getInvalidLoginMessage()).contains(`Login and/or password are wrong.`);
 });
-test(`User can login into application`, async t => {
+test.skip(`User can login into application`, async t => {
     // Navigate to the Login page
     loginPage = await mainPage.signIn();
     await t.expect(await loginPage.isPageDisplayed()).ok('Main elements on the "Login" page are not displayed');

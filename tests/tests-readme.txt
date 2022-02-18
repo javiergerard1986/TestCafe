@@ -127,3 +127,8 @@ Configure jenknins agent:
         2.4.3. You can provide a description to the script
     2.5. If you are executing a testCafe project you need to install node in the jenkins Agent, to do it,
     in the Build section execute: npm i (only 1 time)    
+
+Install reporter:
+1. Open a cmd and navigate to the project root folder
+2. Execute the npm install testcafe-reporter-json
+3. Add the --reporter json to the scripts in the package.json file: "test:chrome": "testcafe chrome ./tests/*.ts -s takeOnFails=true --disable-page-caching --reporter json",

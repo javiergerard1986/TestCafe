@@ -4,7 +4,7 @@
   "description": "Automated testing with TestCafe",
   "main": "index.js",
   "scripts": {
-    "test:chrome": "testcafe chrome ./tests/*.ts -s takeOnFails=true --disable-page-caching",
+    "test:chrome": "testcafe chrome ./tests/*.ts -s takeOnFails=true --disable-page-caching --reporter json",
     "test:chrome:6": "testcafe -c 6 chrome ./tests/*.ts -s takeOnFails=true --disable-page-caching",
     "test:chrome:headless": "testcafe chrome:headless ./tests/*.ts -s takeOnFails=true --disable-page-caching",
     "test:chrome:headless:6": "testcafe -c 6 chrome:headless ./tests/*.ts -s takeOnFails=true --disable-page-caching",
@@ -22,6 +22,7 @@
   "license": "ISC",
   "dependencies": {
     "prettier": "^2.5.1",
-    "testcafe": "^1.18.3"
+    "testcafe": "^1.18.3",
+    "testcafe-reporter-json": "^2.2.0"
   }
 }

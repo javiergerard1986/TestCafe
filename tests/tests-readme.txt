@@ -114,3 +114,16 @@ test.skip(`Test to be skipped`, async t => {
     const css = xPathToCss(xPath);
     await t.click(css);
 });
+
+Configure jenknins agent:
+1. If you are using a windows machine, remember to select the Windoes command shell in the Build selection
+2. If you want to run from a git repository, then: install in jenkins the github plugin
+    2.1. Provide the repository URL (example): https://github.com/javiergerard1986/TestCafe.git
+    2.2. Create the credentials, and then select it to use it (below the field were the git repository url was added)
+    2.3. Select execute Windows command: npm run <scriptToRun> or npm run %<scriptVariable>%
+    2.4. If you are using a script, to create it: 
+        2.4.1. In the Add Parameter field select: selection
+        2.4.2. Options field provide the name of all the scripts that could be executed, exaple: test:chrome
+        2.4.3. You can provide a description to the script
+    2.5. If you are executing a testCafe project you need to install node in the jenkins Agent, to do it,
+    in the Build section execute: npm i (only 1 time)    
